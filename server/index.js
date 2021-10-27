@@ -14,6 +14,10 @@ const server = http.createServer(app)
 
 const io = socketIO(server)
 
+io.on('connection', () => {
+  console.log('new connection')
+})
+
 server.listen(port, () => {
   console.log(`server is working on ${port}`)
 })
