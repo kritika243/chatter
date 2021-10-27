@@ -6,6 +6,8 @@ const socketIO = require('socket.io')
 const app = express()
 const port = 4500 || process.env.port
 
+app.use(cors())
+
 app.get('/', (req, res) => {
   res.send('its working')
 })
