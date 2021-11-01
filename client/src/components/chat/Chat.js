@@ -13,6 +13,7 @@ const Chat = () => {
     socket.on('connect', () => {
       alert('connected')
     })
+    socket.emit('joined', { user: user })
     return () => {}
   }, [socket])
 

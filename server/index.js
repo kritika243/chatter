@@ -16,8 +16,12 @@ const server = http.createServer(app)
 
 const io = socketIO(server)
 
-io.on('connection', () => {
+io.on('connection', (socket) => {
   console.log('new connection')
+
+  socket.on('joined', ({ user }) => {
+    console.log(`${user} has joined`)
+  })
 })
 
 server.listen(port, () => {
