@@ -1,14 +1,14 @@
-import socketIO from 'socket.io-client'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css'
-
-const ENDPOINT = 'http://localhost:4500/'
-const socket = socketIO(ENDPOINT, { transports: ['websocket'] })
+import Join from './components/join/Join'
 
 function App() {
-  socket.on('connect', () => {})
   return (
     <div className='App'>
-      <h1>Working</h1>
+      <Router>
+        <Route exact path='/' component={Join} />
+        <Route path='/chat' />
+      </Router>
     </div>
   )
 }
