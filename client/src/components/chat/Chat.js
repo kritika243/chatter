@@ -7,15 +7,31 @@ import sendLogo from '../../images/send.png'
 const ENDPOINT = 'http://localhost:4500/'
 
 const Chat = () => {
-  const socket = socketIO(ENDPOINT, { transports: ['websocket'] })
-
   useEffect(() => {
+    const socket = socketIO(ENDPOINT, { transports: ['websocket'] })
+
     socket.on('connect', () => {
       alert('connected')
     })
     socket.emit('joined', { user: user })
-    return () => {}
-  }, [socket])
+
+    socket.on('welcome', (data) => {
+      console.log(data.user, data.message)
+    })
+
+    socket.on('userJoined', (data) => {
+      console.log(data.user, data.message)
+    })
+
+    socket.on('leave', (data) => {
+      console.log(data.user, data.message)
+    })
+
+    return () => {
+      socket.emit('disconnect')
+      socket.off()
+    }
+  }, [])
 
   return (
     <div className='chatPage'>
