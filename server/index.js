@@ -41,6 +41,10 @@ io.on('connection', (socket) => {
     })
     console.log('user left')
   })
+
+  socket.on('message', ({ message, id }) => {
+    io.emit('sendMessage', { user: users[id], message: message, id })
+  })
 })
 
 server.listen(port, () => {
