@@ -79,7 +79,11 @@ const Chat = () => {
           ))}
         </ReactScrollToBottom>
         <div className='inputBox'>
-          <input type='text' id='chatInput' />
+          <input
+            onKeyPress={(event) => (event.key == 'Enter' ? send() : null)}
+            type='text'
+            id='chatInput'
+          />
           <button onClick={send} className='sendBtn'>
             <img src={sendLogo} alt='Send' />
           </button>
