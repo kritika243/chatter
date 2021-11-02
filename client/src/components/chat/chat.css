@@ -16,10 +16,28 @@
 .chatHeader {
   background-color: #ff2281;
   height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatHeader > h2 {
+  cursor: default;
+  color: white;
+  margin: 1.5vmax;
+}
+
+.chatHeader img {
+  cursor: pointer;
+  margin: 1.5vmax;
+  transition: all 0.3s;
+}
+
+.chatHeader img:hover {
+  transform: scale(2);
 }
 
 .chatBox {
-  border: 0.2vmax solid black;
   height: 70%;
   box-sizing: border-box;
 }
@@ -37,6 +55,7 @@
   box-sizing: border-box;
   background-color: white;
   font-size: 1.5vmax;
+  border-top: 0.2vmax solid black;
 }
 
 .sendBtn {
@@ -46,6 +65,7 @@
   width: 20%;
   border: none;
   cursor: pointer;
+  outline: none;
   transition: all 0.3s;
 }
 
