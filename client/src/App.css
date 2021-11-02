@@ -4,3 +4,98 @@ body {
   font-family: 'Zen Maru Gothic', sans-serif;
   box-sizing: border-box;
 }
+
+@media (max-aspect-ratio: 7/10) {
+  .joinPage {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start !important;
+  }
+  .joinContainer {
+    margin-top: 30vw !important;
+    width: 100%;
+  }
+
+  .joinContainer > img {
+    width: 30vw !important;
+  }
+
+  .joinContainer > h1 {
+    font-size: 6vw !important;
+    width: 55vw !important;
+    border-bottom: 0.6vw solid #ff2282e7 !important;
+    padding: 3vw !important;
+  }
+
+  #joinInput {
+    width: 55vmax !important;
+    padding: 4vw !important;
+    font-size: 4vw !important;
+    margin: 5vw !important;
+    border-radius: 40px;
+  }
+
+  .joinBtn {
+    width: 30vmax !important;
+    padding: 4vw !important;
+    font-size: 4vw !important;
+    margin: 2vmax;
+  }
+
+  .chatContainer {
+    background-color: white;
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .chatHeader {
+    height: 12% !important;
+  }
+
+  .chatHeader > h2 {
+    margin: 8vw !important;
+    font-size: 5vw !important;
+  }
+
+  .chatHeader img {
+    cursor: pointer;
+    margin: 6vw !important;
+    transform: scale(1.6) !important;
+  }
+  .chatHeader img:hover {
+    transform: scale(2) !important;
+  }
+
+  .chatBox {
+    height: 80% !important;
+  }
+
+  .inputBox {
+    height: 10% !important;
+  }
+
+  #chatInput {
+    padding: 4vw !important;
+    font-size: 4vw !important;
+  }
+
+  .sendBtn {
+    background-color: #ff2281;
+    color: white;
+    font-size: 1.2vmax;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+  }
+
+  .messageBox {
+    /* width: initial !important; */
+    padding: 3vw !important;
+    margin: 3vw !important;
+    border-radius: 1.4vw !important;
+    display: inline-block;
+    clear: both;
+  }
+}
