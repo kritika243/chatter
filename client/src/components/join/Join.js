@@ -28,7 +28,7 @@ const Join = () => {
         />
         <Link to='/chat' onClick={(e) => (!name ? e.preventDefault() : null)}>
           <button className='joinBtn' onClick={sendUser}>
-            LogIn
+            Start
           </button>
         </Link>
       </div>
